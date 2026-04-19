@@ -72,4 +72,21 @@ public class PlanetRepositoryTest {
 
     assertThat(planetOpt).isEmpty();
   }
+
+  @Test
+  public void getPlanet_ByExistingName_ReturnsPlanet() {
+    Planet planet = testEntityManager.persistFlushFind(PLANET); // Cria a entidade no banco de teste antes de executar o find do repository
+
+    Optional<Planet> planetOpt = planetRepository.findByName(planet.getName());
+
+    assertThat(planetOpt).isNotEmpty();
+    assertThat(planetOpt.get()).isEqualTo(planet);
+  }
+
+  @Test
+  public void getPlanet_ByUnexistingName_ReturnsEmpty() {
+    Optional<Planet> planetOpt = planetRepository.findByName(PLANET.getName());
+
+    assertThat(planetOpt).isEmpty();
+  }
 }
