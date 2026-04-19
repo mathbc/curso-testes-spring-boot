@@ -95,4 +95,14 @@ public class PlanetControllerTest {
         get("/planets/1")
       ).andExpect(status().isNotFound());
   }
+
+  @Test
+  public void getPlanet_ByExistingName_ReturnsPlanet() throws Exception {
+
+  }
+
+  @Test
+  public void getPlanet_ByUnexistingName_ReturnsNotFound() throws Exception {
+    
+  }
 }
