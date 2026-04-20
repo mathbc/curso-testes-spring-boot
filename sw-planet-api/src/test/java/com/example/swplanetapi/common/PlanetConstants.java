@@ -10,8 +10,8 @@ public class PlanetConstants {
   public static final Planet INVALID_PLANET = new Planet("", "", "");
 
   public static final Planet TATOOINE = new Planet(1L, "Tatooine", "arid", "desert");
-  public static final Planet ALDERAAN = new Planet(1L, "Alderaan", "temperate", "gass");
-  public static final Planet YAVINIV = new Planet(1L, "Yavin IV", "temperate, tropical", "gass");
+  public static final Planet ALDERAAN = new Planet(2L, "Alderaan", "temperate", "gass");
+  public static final Planet YAVINIV = new Planet(3L, "Yavin IV", "temperate, tropical", "gass");
 
   public static final List<Planet> PLANETS = new ArrayList<>() {
     {
