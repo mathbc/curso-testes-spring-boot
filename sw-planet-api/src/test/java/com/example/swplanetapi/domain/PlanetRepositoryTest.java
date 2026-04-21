@@ -108,7 +108,7 @@ public class PlanetRepositoryTest {
     assertThat(responseWithoutFilters).hasSize(3);
     assertThat(responseWithFilters).isNotEmpty();
     assertThat(responseWithFilters).hasSize(1);
-    assertThat(responseWithFilters.get(0)).isEqualTo(TATOOINE);
+    assertThat(responseWithFilters.get(0).getName()).isEqualTo(TATOOINE.getName());
   }
 
   @Test
