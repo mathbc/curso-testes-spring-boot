@@ -10,6 +10,8 @@ import javax.validation.constraints.NotEmpty;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
+import com.example.swplanetapi.jacoco.ExcludeFromJacocoGeneratedReport;
+
 @Entity
 @Table(name = "planets")
 public class Planet {
@@ -88,6 +90,7 @@ public class Planet {
   }
 
   @Override
+  @ExcludeFromJacocoGeneratedReport
   public String toString() {
     return "Planet [climate=" + climate + ", id=" + id + ", name=" + name + ", terrain=" + terrain + "]";
   }
